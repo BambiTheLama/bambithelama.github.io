@@ -1,1 +1,811 @@
-<h1>Test</h1>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szymon Kołodziejczyk Portfolio</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!--
+  - #MAIN
+-->
+
+<main>
+
+  <!--
+    - #SIDEBAR
+  -->
+
+  <aside class="sidebar" data-sidebar>
+
+    <div class="sidebar-info">
+
+      <figure class="avatar-box">
+        <img src="./assets/images/my-avatar.png" alt="Szymon Kołodziejczyk" width="200">
+      </figure>
+
+      <div class="info-content">
+        <h1 class="name" title="Szymon Kołodziejczyk">Szymon <br/> Kołodziejczyk</h1>
+
+        <p class="title">Programista</p>
+      </div>
+
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Pokaż dane</span>
+
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
+
+    </div>
+
+    <div class="sidebar-info_more">
+
+      <div class="separator"></div>
+
+      <ul class="contacts-list">
+
+        <li class="contact-item">
+
+          <div class="icon-box">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <!--ZMIEŃ-->
+            <a href="mailto:example@gmail.com" class="contact-link">example@gmail.com</a>
+          </div>
+
+        </li>
+
+        <li class="contact-item">
+
+          <div class="icon-box">
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Telefon</p>
+
+            <a href="tel:+48888366369" class="contact-link">+48 888 366 369</a>
+          </div>
+
+        </li>
+
+        <li class="contact-item">
+
+          <div class="icon-box">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Urodziny</p>
+
+            <time datetime="2000-02-18">Luty 5, 2001</time>
+          </div>
+
+        </li>
+
+        <li class="contact-item">
+
+          <div class="icon-box">
+            <ion-icon name="location-outline"></ion-icon>
+          </div>
+
+          <div class="contact-info">
+            <p class="contact-title">Adres</p>
+
+            <address>Kielce, Świętokrzyskie, Polska</address>
+          </div>
+
+        </li>
+
+      </ul>
+
+      <div class="separator"></div>
+
+      <ul class="social-list">
+
+        <li class="social-item">
+          <a href="#" class="social-link">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+
+        <li class="social-item">
+          <a href="#" class="social-link">
+            <ion-icon name="link"></ion-icon>
+          </a>
+        </li>
+
+        <li class="social-item">
+          <a href="#" class="social-link">
+            <ion-icon name="link"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </aside>
+
+  <!--
+    - #main-content
+  -->
+
+  <div class="main-content">
+
+    <!--
+      - #NAVBAR
+    -->
+
+    <nav class="navbar">
+
+      <ul class="navbar-list">
+
+        <li class="navbar-item">
+          <button class="navbar-link  active" data-nav-link>O mnie</button>
+        </li>
+
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>CV</button>
+        </li>
+
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Portfolio</button>
+        </li>
+
+
+
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Kontakt</button>
+        </li>
+
+      </ul>
+
+    </nav>
+
+
+
+
+
+    <!--
+      - #ABOUT
+    -->
+
+    <article class="about active" data-page="o mnie">
+
+      <header>
+        <h2 class="h2 article-title">O mnie</h2>
+      </header>
+
+      <section class="about-text">
+        <!--ZMIEŃ-->
+        <p>
+          Jestem studentem drugiego stopnia na Politechnice Świętokrzyskiej. Jakiś tam opis itd.
+        </p>
+
+        <p>
+          Lelum polelum tu se coś dopisz
+        </p>
+      </section>
+
+      <!--
+        - service
+      -->
+
+      <section class="service">
+
+        <h3 class="h3 service-title">Czym się zajmuję?</h3>
+
+        <ul class="service-list">
+
+          <li class="service-item">
+
+<!--            TU SE ZMIEŃ POD SIEBIE, JAK POTRZEBUJESZ IKON TO PISZ-->
+            <!--ZMIEŃ-->
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-game-dev.svg" alt="Game Dev icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Game Dev</h4>
+
+              <p class="service-item-text">
+                Tworzenie zaawansowanych gier przy użyciu silników Unreal Engine oraz Unity.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-web.svg" alt="websites icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Strony internetowe</h4>
+
+              <p class="service-item-text">
+                Proste blogi, portfolia na wysokim poziomie z zachowaniem pełnej responsywności
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-models.svg" alt="models icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Modelowanie i animacje</h4>
+
+              <p class="service-item-text">
+                Profesjonalne modele na wysokim poziomie.<br/>
+                Tworzenie tekstur PBR oraz map normalnych.<br/>
+                Animacje 2D oraz 3D - z zachowaniem 12 zasad animacji.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-graphic.svg" alt="graphic icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Grafika</h4>
+
+              <p class="service-item-text">
+                Tworzenie tekstur, grafik, elementów UI, takich jak przyciski, suwaki.<br/>
+                Zarówno grafika wektorowa, jak i rastrowa, a także pixel-art.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-code.svg" alt="code icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Programowanie oraz AI</h4>
+
+              <p class="service-item-text">
+                Doświadczenie w wielu językach takich jak: C, C++, C#, Java czy Python.<br/>
+                Znajomość podstaw AI, tworzenie własnych modeli oraz sieci neuronowych.
+              </p>
+            </div>
+
+          </li>
+
+          <li class="service-item">
+
+            <div class="service-icon-box">
+              <img src="./assets/images/icons/icon-audio.svg" alt="audio icon" width="40">
+            </div>
+
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Audio</h4>
+
+              <p class="service-item-text">
+                Tworzenie ścieżek dźwiękowych do autorskich gier.<br/>
+                Udźwiękowienie gier, dźwięki FX takie jak wybuchy, strzały i inne.<br/>
+                Lektor, dubbing — rejestrowanie nagrań głosu na potrzeby przerywników filmowych, narracji gry.
+              </p>
+            </div>
+
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!--
+        - clients
+      -->
+
+<!-- TU LOGA GIEREK, JAK NIEPOTRZEBNE TO NAPISZ TO WYJEBĘ-->
+      <!--ZMIEŃ-->
+      <section class="logos">
+
+        <h3 class="h3 logos-title">Projekty</h3>
+
+        <ul class="logos-list has-scrollbar">
+
+          <li class="logos-item">
+            <img src="./assets/images/ft.png" alt="logo">
+          </li>
+
+          <li class="logos-item">
+            <img src="./assets/images/s3d.png" alt="logo">
+          </li>
+
+          <li class="logos-item">
+            <img src="./assets/images/mc.png" alt="logo">
+          </li>
+
+          <li class="logos-item">
+            <img src="./assets/images/SandTetris.png" alt="logo">
+          </li>
+
+          <li class="logos-item">
+            <img src="./assets/images/snake.png" alt="logo">
+          </li>
+
+          <li class="logos-item">
+            <img src="./assets/images/zpo.png" alt="logo">
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+
+
+
+    <!--
+      - #CV
+    -->
+
+    <article class="resume" data-page="cv">
+
+      <header>
+        <h2 class="h2 article-title">CV</h2>
+      </header>
+
+      <section class="timeline">
+
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+
+          <h3 class="h3">Edukacja</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title">Politechnika Świętokrzyska w Kielcach</h4>
+
+            <span>2020 — obecnie</span>
+
+            <p class="timeline-text">
+              Kierunek: informatyka<br/>
+              Specjalizacja: grafika komputerowa<br/>
+              Luty 2024 — uzyskano tytuł inżyniera.<br/>
+              Obecnie kontynuacja na drugim stopniu studiów — tytuł magistra.
+            </p>
+
+          </li>
+
+          <li class="timeline-item">
+<!--ZMIEŃ-->
+            <h4 class="h4 timeline-item-title">Liceum w zadupiowie </h4>
+
+            <span>2016 — 2020</span>
+
+            <p class="timeline-text">
+              Profil: kątowy aluminiowy<br/>
+              Poziom wykształcenia: średnie
+            </p>
+
+          </li>
+
+        </ol>
+
+      </section>
+
+      <section class="timeline">
+
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="book-outline"></ion-icon>
+          </div>
+
+          <h3 class="h3">Doświadczenie (praktyki, staże)</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title">Papal Games Michał Sydoryk</h4>
+
+            <span>lipiec — sierpień 2023</span>
+
+            <p class="timeline-text">
+              Praktyki studenckie — projekt gry o tematyce zombie w silniku Unreal Engine
+            </p>
+
+          </li>
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title">Infover</h4>
+
+            <span>wrzesień 2022</span>
+
+            <p class="timeline-text">
+              Staż w ramach projektu "Politechnika Świętokrzyska nowoczesną uczelnią w europejskiej przestrzeni gospodarczej"
+            </p>
+
+          </li>
+
+
+        </ol>
+
+      </section>
+
+      <section class="skill">
+
+        <h3 class="h3 skills-title">Umiejętności</h3>
+
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+<!--TO ZRÓB POD SIEBIE-->
+            <!--ZMIEŃ-->
+            <div class="title-wrapper">
+              <h5 class="h5">Unreal Engine</h5>
+              <data value="70">70%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Unity</h5>
+              <data value="85">85%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Blender — modelowanie i animacje</h5>
+              <data value="90">90%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 90%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Grafika 2D oraz teksturowanie modeli</h5>
+              <data value="90">90%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 90%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Tworzenie UI</h5>
+              <data value="85">85%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">HTML, CSS, JS - technologie web</h5>
+              <data value="80">80%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 80%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Programowanie w C/C++</h5>
+              <data value="90">90%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 90%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Programowanie w C#/.NET</h5>
+              <data value="70">70%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+
+          </li>
+
+          <li class="skills-item">
+
+            <div class="title-wrapper">
+              <h5 class="h5">Języki skryptowe</h5>
+              <data value="60">60%</data>
+            </div>
+
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 60%;"></div>
+            </div>
+
+          </li>
+
+
+
+        </ul>
+
+      </section>
+
+    </article>
+
+
+
+
+    <!--
+      - #PORTFOLIO
+    -->
+
+    <article class="portfolio" data-page="portfolio">
+
+      <header>
+        <h2 class="h2 article-title">Portfolio</h2>
+      </header>
+
+      <section class="projects">
+
+        <ul class="project-list">
+
+          <li class="project-item active" data-filter-item >
+            <a href="#" class="open-modal" data-project="inzynierka"
+               data-title="Praca inżynierska" data-description="Opis projektu Praca inżynierska..."
+               data-gallery='[
+               "./assets/images/projects/Inz/1.png", "./assets/images/projects/Inz/2.png",
+               "./assets/images/projects/Inz/3.png", "./assets/images/projects/Inz/4.png",
+               "./assets/images/projects/Inz/5.png", "./assets/images/projects/Inz/6.png",
+               "./assets/images/projects/Inz/7.png", "./assets/images/projects/Inz/8.png"
+                ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/projects/Inz/3.png" alt="Inżynierka" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">Praca inżynierska</h3>
+
+
+
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item >
+            <a href="#" class="open-modal" data-project="marioai"
+               data-title="MarioAI" data-description="Opis projektu MarioAI..."
+               data-gallery='[
+               "./assets/images/projects/MarioAI/1.png", "./assets/images/projects/MarioAI/2.png",
+               "./assets/images/projects/MarioAI/3.png", "./assets/images/projects/MarioAI/4.png",
+               "./assets/images/projects/MarioAI/5.png", "./assets/images/projects/MarioAI/6.png",
+               "./assets/images/projects/MarioAI/7.png", "./assets/images/projects/MarioAI/8.png"
+                ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/projects/MarioAI/3.png" alt="MarioAI" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">MarioAI</h3>
+
+
+
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item >
+            <a href="#" class="open-modal" data-project="sand-tetris"
+               data-title="Sand Tetris" data-description="Opis projektu Sand Tetris..."
+               data-gallery='[
+               "./assets/images/projects/Tetris/1.png", "./assets/images/projects/Tetris/2.png",
+               "./assets/images/projects/Tetris/3.png", "./assets/images/projects/Tetris/4.png",
+               "./assets/images/projects/Tetris/5.png", "./assets/images/projects/Tetris/6.png",
+               "./assets/images/projects/Tetris/7.png", "./assets/images/projects/Tetris/8.png"
+                ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/projects/Tetris/7.png" alt="Sand Tetris" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">Sand Tetris</h3>
+
+
+
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item >
+            <a href="#" class="open-modal" data-project="minegl"
+               data-title="MineGL" data-description="Opis projektu MineGL..."
+               data-gallery='[
+               "./assets/images/projects/MineGL/1.png", "./assets/images/projects/MineGL/2.png",
+               "./assets/images/projects/MineGL/3.png", "./assets/images/projects/MineGL/4.png",
+               "./assets/images/projects/MineGL/5.png", "./assets/images/projects/MineGL/6.png",
+               "./assets/images/projects/MineGL/7.png", "./assets/images/projects/MineGL/8.png"
+                ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/projects/MineGL/4.png" alt="MineGL" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">MineGL</h3>
+
+
+
+            </a>
+          </li>
+
+          <li class="project-item active" data-filter-item >
+            <a href="#" class="open-modal" data-project="rogue-like"
+               data-title="Rogue Like" data-description="Opis projektu Rogue Like..."
+               data-gallery='[
+               "./assets/images/projects/RogueLike/1.png", "./assets/images/projects/RogueLike/2.png",
+               "./assets/images/projects/RogueLike/3.png", "./assets/images/projects/RogueLike/4.png",
+               "./assets/images/projects/RogueLike/5.png", "./assets/images/projects/RogueLike/6.png"
+                ]'>
+
+              <figure class="project-img">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+
+                <img src="./assets/images/projects/RogueLike/2.png" alt="RogueLike" loading="lazy" class="main-img">
+              </figure>
+
+              <h3 class="project-title">Rogue Like</h3>
+
+
+
+            </a>
+          </li>
+
+
+        </ul>
+
+        <div id="project-modal" class="modal">
+          <span class="close">&times;</span>
+          <div class="modal-content">
+            <img src="" alt="" class="main-image">
+            <h3 class="modal-title"></h3>
+            <p class="modal-description"></p>
+            <div class="gallery">
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </article>
+
+
+    <!--
+      - #CONTACT
+    -->
+
+    <article class="contact" data-page="kontakt">
+
+      <header>
+        <h2 class="h2 article-title">Kontakt</h2>
+      </header>
+
+      <section class="mapbox" data-mapbox>
+        <figure>
+          <iframe
+                  src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Kielce,%20%C5%9Awi%C4%99tokrzyskie,%20Polska+(Kontakt)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  width="400" height="300" loading="lazy"></iframe>
+        </figure>
+      </section>
+
+      <section class="contact-form">
+
+        <h3 class="h3 form-title">Formularz kontaktowy</h3>
+
+        <form class="form" data-form>
+
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Imię/Nazwa" required data-form-input>
+
+            <input type="email" name="email" class="form-input" placeholder="Adres email" required data-form-input>
+          </div>
+
+          <textarea name="message" class="form-input" placeholder="Wiadomość" required data-form-input></textarea>
+
+          <button class="form-btn" type="submit" disabled data-form-btn>
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Wyślij wiadomość</span>
+          </button>
+
+        </form>
+
+      </section>
+
+    </article>
+
+  </div>
+
+</main>
+
+<script src="./assets/js/script.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
