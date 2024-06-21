@@ -8,23 +8,6 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-  }
-}
-
-
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
@@ -72,21 +55,23 @@ form.addEventListener('submit', event => {
 });
 
 
-//modal
-
 document.addEventListener('DOMContentLoaded', function() {
   var modal = document.getElementById('project-modal');
   var span = document.getElementsByClassName('close')[0];
+  var leftArrow = document.querySelector('.left-arrow');
+  var rightArrow = document.querySelector('.right-arrow');
+  var currentImageIndex = 0;
+  var galleryImages = [];
 
   span.onclick = function() {
     modal.style.display = 'none';
-  }
+  };
 
   window.onclick = function(event) {
     if (event.target === modal) {
       modal.style.display = 'none';
     }
-  }
+  };
 
   var links = document.querySelectorAll('a.open-modal');
   links.forEach(function(link) {
@@ -96,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var title = this.dataset.title;
       var description = this.dataset.description;
       var mainImageSrc = this.querySelector('.main-img').src;
-      var galleryImages = JSON.parse(this.dataset.gallery);
+      galleryImages = JSON.parse(this.dataset.gallery);
 
       var modalTitle = modal.querySelector('.modal-title');
       var modalDescription = modal.querySelector('.modal-description');
@@ -108,22 +93,60 @@ document.addEventListener('DOMContentLoaded', function() {
       modalMainImage.src = mainImageSrc;
       modalMainImage.alt = title;
 
-      modalGallery.innerHTML = '';
+      currentImageIndex = 0;
 
-      // Dynamically add gallery images
-      galleryImages.forEach(function(src) {
-        var img = document.createElement('img');
-        img.src = src;
-        img.alt = title + ' Gallery Image';
-        img.onclick = function() {
-          modalMainImage.src = this.src;
-          modalMainImage.alt = this.alt;
-        };
-        modalGallery.appendChild(img);
-      });
+      updateGalleryThumbnails();
 
       modal.style.display = 'block';
     };
   });
-});
 
+  leftArrow.onclick = function() {
+    if (currentImageIndex > 0) {
+      currentImageIndex--;
+    } else {
+      currentImageIndex = galleryImages.length - 1;
+    }
+    updateMainImage();
+    updateGalleryThumbnails();
+  };
+
+  rightArrow.onclick = function() {
+    if (currentImageIndex < galleryImages.length - 1) {
+      currentImageIndex++;
+    } else {
+      currentImageIndex = 0;
+    }
+    updateMainImage();
+    updateGalleryThumbnails();
+  };
+
+  function updateMainImage() {
+    var modalMainImage = modal.querySelector('.main-image');
+    modalMainImage.src = galleryImages[currentImageIndex];
+  }
+
+  function updateGalleryThumbnails() {
+    var modalGallery = modal.querySelector('.gallery');
+    modalGallery.innerHTML = '';
+
+    var indices = [
+      (currentImageIndex - 1 + galleryImages.length) % galleryImages.length,
+      currentImageIndex,
+      (currentImageIndex + 1) % galleryImages.length
+    ];
+
+    indices.forEach(function(index) {
+      var img = document.createElement('img');
+      img.src = galleryImages[index];
+      img.alt = `Gallery Image ${index + 1}`;
+      img.classList.toggle('active', index === currentImageIndex);
+      img.onclick = function() {
+        currentImageIndex = index;
+        updateMainImage();
+        updateGalleryThumbnails();
+      };
+      modalGallery.appendChild(img);
+    });
+  }
+});
