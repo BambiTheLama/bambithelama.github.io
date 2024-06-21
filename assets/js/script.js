@@ -51,7 +51,7 @@ form.addEventListener('submit', event => {
   const email = document.querySelector('input[name="email"]').value;
   const message = document.querySelector('textarea[name="message"]').value;
 
-  window.location.href = `mailto:b.bugara.kontakt@gmail.com?subject=Wiadomość od ${fullname}&body=Nazwa/Imię: ${fullname}%0AEmail: ${email}%0AWiadomość: ${message}`;
+  window.location.href = `mailto:szymek22466@gmail.com?subject=Wiadomość od ${fullname}&body=Nazwa/Imię: ${fullname}%0AEmail: ${email}%0AWiadomość: ${message}`;
 });
 
 
